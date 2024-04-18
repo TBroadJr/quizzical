@@ -10,6 +10,7 @@ export default function Quiz() {
   const [restart, setRestart] = useState(true)
 
   useEffect(function() {
+    console.log("Hello")
     setQuestions([])
     setSelectedAnswers({})
     setShow(false)
