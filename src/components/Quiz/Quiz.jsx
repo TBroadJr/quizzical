@@ -1,6 +1,8 @@
 import "./Quiz.css"
 import { useState, useEffect } from 'react'
 import Question from "../Question/Question"
+import yellowBlob from "../../assets/blob-5.png"
+import blueBlob from "../../assets/blob-6.png"
 
 export default function Quiz() {
   const [questions, setQuestions] = useState([])
@@ -10,7 +12,6 @@ export default function Quiz() {
   const [restart, setRestart] = useState(true)
 
   useEffect(function() {
-    console.log("Hello")
     setQuestions([])
     setSelectedAnswers({})
     setShow(false)
@@ -81,8 +82,8 @@ export default function Quiz() {
   return (
     <main className="quiz-container">
       <div className="container">
-        <img className="yellow-blob-quiz" src="../../assets/blob-5.png" alt="yellow blob" />
-        <img className="blue-blob-quiz" src="/src/assets/blob-6.png" alt="blue blob" />
+        <img className="yellow-blob-quiz" src={yellowBlob} alt="yellow blob" />
+        <img className="blue-blob-quiz" src={blueBlob} alt="blue blob" />
         {questionEl}
         <div className="score-container">
           {show && <p className="score-text">You Scored {score} / 5</p>}
