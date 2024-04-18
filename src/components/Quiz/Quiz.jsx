@@ -80,7 +80,7 @@ export default function Quiz() {
   return (
     <main className="quiz-container">
       <div className="container">
-        <img className="yellow-blob-quiz" src="../assets/blob-5.png" alt="yellow blob" />
+        <img className="yellow-blob-quiz" src="../../assets/blob-5.png" alt="yellow blob" />
         <img className="blue-blob-quiz" src="/src/assets/blob-6.png" alt="blue blob" />
         {questionEl}
         <div className="score-container">
